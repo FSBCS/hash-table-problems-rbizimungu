@@ -1,10 +1,12 @@
 def group_anagrams(words):
-    a = ()
+    groups = {}
     for word in words:
-        s = ''.join(sorted(word))
-        if s in a: 
-            a[s].append(word)
+        key = ''.join(sorted(word))
+        if key in groups: 
+            groups[key].append(word)
         else:
-            a[s] = [word]
+            groups[key] = [word]
 
-return list(a.values)
+
+
+    print(list(groups.values()))
