@@ -9,4 +9,4 @@ def group_anagrams(words):
 
 
 
-    print(list(groups.values()))
+    return list.groups.values()

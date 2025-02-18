@@ -8,7 +8,7 @@ def k_most_frequent(lst, k):
     leaderboard = sorted(counts, key=lambda x: counts[x], reverse=True)
 
     i = min(len(leaderboard) - 1, k)
-    ith_count = counts[leaderboard[i]]
+    ith_count = counts[leaderboard[i - 1]]
 
     while i < len(leaderboard) and counts[leaderboard[i]] == ith_count:
         i += 1
